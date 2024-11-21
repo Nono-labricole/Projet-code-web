@@ -92,6 +92,11 @@ h2 {
     text-align: justify;
 
 }
+
+.cartouche0:hover{
+    box-shadow: 0rem 0rem 1rem var(--color-base);
+}
+
 .cartouche1 {
     border-radius: 8px;
     text-align: left;
