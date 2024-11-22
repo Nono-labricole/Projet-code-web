@@ -14,6 +14,11 @@
     --lumineuxb : #A7A7A7;
     --background: light-dark(var(--lumineuxb),var(--obscurb));
     --color-bg: var(--background);
+
+    --obscurpict : url('images/vador.png');
+    --lumineuxpict : url('images/anakin2.png');
+    --picture: light-dark(var(--lumineuxpict),var(--obscurpict));
+    --picture-aff: var(--picture);
 }
 
 html{
@@ -51,21 +56,27 @@ header{
     background-color: var(--color-bg);
     color: var(--color-base);
     text-align: center;
-    font-size: 6rem;
+    font-size: 25vw;
+
 }
 
 .header .img{
     aspect-ratio: 2 / 3;
     grid-area: 1 / 1;
     height: 20rem;
-    margin-top: 5rem;
+    /*margin-top: 5rem;*/
   
-    background-image: url('images/anakin.png');
+    background-image: var(--picture-aff);
     /* background-image: url('https://image.noelshack.com/fichiers/2023/44/4/1698916817-dark-vador-darth-vader-bras-croises-sw.png'); */
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    
+    width: 100%;
+    height: 100%;
+}
+
+.header .texte{
+    grid-area: 1 / 1;
 }
 
 
@@ -79,18 +90,22 @@ body{
     margin: 5%;
 }
 
-
 h2 {
     text-align: center;
     color: var(--color-titre) ;
 }
+
 .cartouche0 {
     min-width: 12rem;
+    height: 10.5rem;
+
+    align-content: end;
+
     border-radius: 8px;
     background-color: var(--color-base);
-    height: 10.5rem;
-    text-align: justify;
-
+}
+.cartouche0 p{
+    text-align: center;
 }
 
 .cartouche0:hover{
@@ -101,27 +116,30 @@ h2 {
     border-radius: 8px;
     text-align: left;
 }
+
 .cartouche3 {
     border-radius: 8px;
     text-align: center;
     background-color : var(--color-base);
-    height: 3rem;
+    height: 4rem;
 }
+
 .section0 .c1 {
     border-radius: 8px;
     padding: 0.1rem 1.3rem;
     background-color:var(--color-base) ;
 }
+
 .section1 .art1  {
       
     display: grid;
     gap: 1rem ;
+
     @media(min-width: 30rem){
         grid-template-columns: repeat(4fr);
         grid-template-rows: 4fr;
-        color: aqua;
+       
     }
-    
     @media(min-width: 40rem){
         .c5{
             grid-column-start:2;
@@ -133,11 +151,9 @@ h2 {
             grid-column-end: 4;
         }
         grid-template-columns: 2fr 2fr 2fr ;
-        grid-template-rows: 2fr 2fr ;
-        color: violet;
+        grid-template-rows: 2fr 2fr ; 
     }
-    
-    
+      
 }
 .section1 .c1{
 background-image:url(https://www.starwars-universe.com/images/encyclopedie/vaisseaux_vehicules/images_v6/etoile_noire_imv6.jpg);
@@ -146,6 +162,7 @@ background-size: cover;
 grid-column-start: 1;
 grid-column-end: 2;
 }
+
 .section1 .c2{
     background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/3504171/pub_62f1517dc9439874e9998852_62f515f0324aad42334a38ab/scale_1200);
     background-position: 50% 50%;
@@ -153,6 +170,7 @@ grid-column-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
 .section1 .c4{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/databank_podracer_01_169_89a8621d.jpeg?region=0%2C0%2C1560%2C780);
     background-position: 50% 50%;
@@ -163,6 +181,7 @@ grid-column-end: 2;
     background-position: 50% 50%;
     background-size: cover;
 }
+
 .section1 .c5 {
     background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrVMSz6Gmnutr5T7BwDoJu_lJujBwqF2anoVytibsxZhuuuwQhpfS2HisjK8r03thfpe1aWk0dpNu7RuTZzg5eiM-9tmt7nwCn8gqAohd9UgB4hkbSIT6oEemzWuukI_J2e-pkn5V4jWTD/s1600/4RG7890.jpg);
     background-position: 50% 50%;
@@ -170,6 +189,7 @@ grid-column-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
 .section1 .c6 {
     background-image: url(https://www.slashfilm.com/img/gallery/revenge-of-the-siths-original-younglings-massacre-scene-was-too-horribly-violent-for-star-wars/l-intro-1672265377.jpg);
     background-position: 80% 20%;
@@ -177,68 +197,12 @@ grid-column-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
 }
-.section2 .art2{
-    
-    display: grid;
-    @media(min-width: 30rem){
-        grid-template-columns: repeat(5fr);
-        grid-template-rows: 4fr;
-        grid-column-gap: 5rem;
-        border-radius: 8;
-        gap: 1rem;
-        color: aqua;
-    }
-    
-    @media(min-width: 40rem){
-        grid-template-columns: 2fr 2fr 2fr 2fr ;
-        grid-template-rows: 2fr ;
-        color: violet;
-    }
-   
-}
 
-.section2 .c1{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-.section2 .c2{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-.section2 .c3{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-.section2 .c4{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-.section2 .c5{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 5;
- 
-}
-.c6{
-    
-    grid-column-start:4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.c7{
-    
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.c8 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
+.section2 .art2{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-column: dense;
+
 }
 .section3 .art3{
     display: flex;
@@ -250,9 +214,11 @@ grid-column-end: 2;
     background-color: aqua;
     flex-grow: 1
 }
+
 .section3 .c2{
     background-color: var(--color-base);
 }
+
 .cartouche2{
     height: 3rem;
     flex-grow: 1;
