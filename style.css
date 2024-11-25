@@ -14,11 +14,6 @@
     --lumineuxb : #A7A7A7;
     --background: light-dark(var(--lumineuxb),var(--obscurb));
     --color-bg: var(--background);
-
-    --obscurpict : url('images/vador.png');
-    --lumineuxpict : url('images/anakin2.png');
-    --picture: light-dark(var(--lumineuxpict),var(--obscurpict));
-    --picture-aff: var(--picture);
 }
 
 html{
@@ -66,7 +61,7 @@ header{
     height: 20rem;
     /*margin-top: 5rem;*/
   
-    background-image: var(--picture-aff);
+    background-image: url('images/vador.png');
     /* background-image: url('https://image.noelshack.com/fichiers/2023/44/4/1698916817-dark-vador-darth-vader-bras-croises-sw.png'); */
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -121,7 +116,7 @@ h2 {
     border-radius: 8px;
     text-align: center;
     background-color : var(--color-base);
-    height: 4rem;
+    height: 5rem;
 }
 
 .section0 .c1 {
@@ -200,16 +195,38 @@ grid-column-end: 2;
 
 .section2 .art2{
     display: grid;
-    grid-template-rows: 1fr;
-    grid-column: dense;
-
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: column dense;
+    @media(min-width: 40rem){
+        grid-template-columns: repeat(4fr);
+        grid-template-rows: 1fr 1fr;
+    
+        .c5{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+        .c6{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+        .c7{
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .c8{
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+}
 }
 .section3 .art3{
     display: flex;
     gap:1rem;
+    align-items: center;
 }
 
-.section3 .c1{
+input {
     flex: 0 0 12.5rem;
     background-color: aqua;
     flex-grow: 1
