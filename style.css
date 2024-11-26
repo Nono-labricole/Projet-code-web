@@ -136,14 +136,14 @@ h2 {
 }
 
 .cartouche0 {
-    min-width: 12rem;
+    min-width: 9rem;
     min-height: 10.5rem;
-    max-width: 30rem;
 
     align-content: end;
 
     border-radius: 8px;
     background-color: var(--color-base);
+    box-shadow: 0rem 0rem 0.5rem black;
 }
 .cartouche0 p{
     text-align: center;
@@ -154,7 +154,6 @@ h2 {
 }
 
 .cartouche1 {
-
     border-radius: 8px;
     text-align: left;
 }
@@ -166,7 +165,9 @@ h2 {
     border-radius: 8px;
     text-align: center;
     background-color : var(--color-base);
-    height: 5rem;
+    align-content: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .section0 .c1 {
@@ -180,8 +181,7 @@ h2 {
     display: grid;
     gap: 1rem ;
     grid-template-columns: repeat(4fr);
-    grid-template-rows: 4fr;
-       
+    grid-template-rows: 4fr; 
     
     @media(min-width: 40rem){
         .c5{
@@ -278,24 +278,36 @@ grid-column-end: 2;
 .section3 .art3{
     display: flex;
     gap:1rem;
+    justify-content: center;
 }
 
-.email {
-    flex: 0 0 12.5rem;
-    flex-grow: 1
-
+input[type="email" i] {
+    width: 50vw;
+    padding: 0.5rem;
+    border-color: var(--color-base);
 }
 
 .section3 .c2{
     background-color: var(--color-base);
+    padding: 0.5rem;
+    color: white;
+}
+
+.section3 .c2:hover{
+    opacity: 90%;
+    box-shadow: 0rem 0rem 1rem var(--color-base);
 }
 
 .cartouche2{
-    
+    box-shadow: 0rem 0rem 0.5rem black;
     height: 3rem;
     flex-grow: 1;
     background-color: var(--color-base);
     border-radius: 8rem;
+}
+
+.cartouche2:hover{
+    box-shadow: 0rem 0rem 1rem var(--color-base);
 }
 
 .section4 .art4{
