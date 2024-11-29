@@ -1,39 +1,41 @@
-:root{
+:root {
     --obscurn: rgb(155, 0, 0);
-    --lumineuxn:rgb(6, 108, 224);
-  
-    --nom: light-dark(var(--lumineuxn),var(--obscurn));
+    --lumineuxn: rgb(6, 108, 224);
+
+    --nom: light-dark(var(--lumineuxn), var(--obscurn));
     --color-base: var(--nom);
-    
-    --obscurt : white;
-    --lumineuxt : rgb(6, 108, 224);
-    --titre: light-dark(var(--lumineuxt),var(--obscurt));
+
+    --obscurt: white;
+    --lumineuxt: rgb(6, 108, 224);
+    --titre: light-dark(var(--lumineuxt), var(--obscurt));
     --color-titre: var(--titre);
-    
-    --obscurb : #2D0202;
-    --lumineuxb : #A7A7A7;
-    --background: light-dark(var(--lumineuxb),var(--obscurb));
+
+    --obscurb: #2D0202;
+    --lumineuxb: #A7A7A7;
+    --background: light-dark(var(--lumineuxb), var(--obscurb));
     --color-bg: var(--background);
 
-    --obscurp : url('images/vador.png');
-    --lumineuxp : url('images/anakin2.png');
-    --backgroundi:var(--lumineuxp);/*après plussieurs essais, chatgpt m'a permis de corriger cette partie du code pour la rendre fonctionnelle, les images n'ayant pas réussies à passer par un appel classique de thème clair/sombre*/
+    --obscurp: url('images/vador.png');
+    --lumineuxp: url('images/anakin2.png');
+    --backgroundi: var(--lumineuxp);
+    /*après plussieurs essais, chatgpt m'a permis de corriger cette partie du code pour la rendre fonctionnelle, les images n'ayant pas réussies à passer par un appel classique de thème clair/sombre*/
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-      --backgroundi: var(--obscurp);
+        --backgroundi: var(--obscurp);
     }
 }
 
-html{
+html {
     color-scheme: light dark;
 }
 
 @font-face {
-	font-family:'Starjedi';
-	src:url("/fonts/starjedi/Starjedi.ttf") format("truetype");
+    font-family: 'Starjedi';
+    src: url("/fonts/starjedi/Starjedi.ttf") format("truetype");
 }
+
 /*
 header{
     background-color: var(--color-bg);
@@ -62,29 +64,30 @@ header{
 }
 */
 
-.header{
+.header {
     display: grid;
     background-color: var(--color-bg);
     color: var(--color-base);
     text-align: center;
     font-size: 25vw;
-    @media(min-width: 40rem){
+
+    @media(min-width: 40rem) {
         display: flex;
         gap: 0rem;
         justify-content: center;
         font-size: 15vw;
-        
+
     }
 
 }
 
-.header .img{
+.header .img {
     aspect-ratio: 2 / 3;
     grid-area: 1 / 1;
     height: 20rem;
-    
+
     /*margin-top: 5rem;*/
-  
+
     background-image: var(--backgroundi);
     /* background-image: url('https://image.noelshack.com/fichiers/2023/44/4/1698916817-dark-vador-darth-vader-bras-croises-sw.png'); */
     background-repeat: no-repeat;
@@ -92,14 +95,16 @@ header{
     background-size: cover;
     width: 100%;
     height: 100%;
-    @media(min-width: 40rem){
+
+    @media(min-width: 40rem) {
         aspect-ratio: 3 / 3;
         height: 30rem;
         width: 30rem;
         background-position: 50% 50%;
         flex-grow: 1;
     }
-    @media(min-width: 70rem){
+
+    @media(min-width: 70rem) {
         aspect-ratio: 3 / 3;
         height: 45rem;
         width: 45rem;
@@ -108,10 +113,11 @@ header{
     }
 }
 
-.header .texte{
+.header .texte {
     font-family: Arial, Helvetica, sans-serif;
     grid-area: 1 / 1;
-    @media(min-width: 40rem){
+
+    @media(min-width: 40rem) {
         text-align: center;
         flex-grow: 1;
         margin-left: 20%;
@@ -119,20 +125,20 @@ header{
 }
 
 
-body{
+body {
 
-    font-family:'Starjedi',sans-serif;
+    font-family: 'Starjedi', sans-serif;
     margin: 0%;
     color: white;
 }
 
-.contenu{
+.contenu {
     margin: 5%;
 }
 
 h2 {
     text-align: center;
-    color: var(--color-titre) ;
+    color: var(--color-titre);
 }
 
 .cartouche0 {
@@ -145,11 +151,12 @@ h2 {
     background-color: var(--color-base);
     box-shadow: 0rem 0rem 0.5rem black;
 }
-.cartouche0 p{
+
+.cartouche0 p {
     text-align: center;
 }
 
-.cartouche0:hover{
+.cartouche0:hover {
     box-shadow: 0rem 0rem 1rem var(--color-base);
 }
 
@@ -158,13 +165,14 @@ h2 {
     text-align: left;
 }
 
-.cartouche2{
+.cartouche2 {
     align-content: end;
 }
+
 .cartouche3 {
     border-radius: 8px;
     text-align: center;
-    background-color : var(--color-base);
+    background-color: var(--color-base);
     align-content: center;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -173,40 +181,43 @@ h2 {
 .section0 .c1 {
     border-radius: 8px;
     padding: 0.1rem 1.3rem;
-    background-color:var(--color-base) ;
+    background-color: var(--color-base);
 }
 
-.section1 .art1  {
-      
+.section1 .art1 {
+
     display: grid;
-    gap: 1rem ;
+    gap: 1rem;
     grid-template-columns: repeat(4fr);
-    grid-template-rows: 4fr; 
-    
-    @media(min-width: 40rem){
-        .c5{
-            grid-column-start:2;
-            grid-column-end:3 ;
+    grid-template-rows: 4fr;
+
+    @media(min-width: 40rem) {
+        .c5 {
+            grid-column-start: 2;
+            grid-column-end: 3;
         }
-        .c6{
+
+        .c6 {
             background-position: 80% 20%;
             grid-column-start: 3;
             grid-column-end: 4;
         }
-        grid-template-columns: 2fr 2fr 2fr ;
-        grid-template-rows: 2fr 2fr ; 
+
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
     }
-      
-}
-.section1 .c1{
-background-image:url(https://www.starwars-universe.com/images/encyclopedie/vaisseaux_vehicules/images_v6/etoile_noire_imv6.jpg);
-background-position: 50% 50%;
-background-size: cover;
-grid-column-start: 1;
-grid-column-end: 2;
+
 }
 
-.section1 .c2{
+.section1 .c1 {
+    background-image: url(https://www.starwars-universe.com/images/encyclopedie/vaisseaux_vehicules/images_v6/etoile_noire_imv6.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.section1 .c2 {
     background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/3504171/pub_62f1517dc9439874e9998852_62f515f0324aad42334a38ab/scale_1200);
     background-position: 50% 50%;
     background-size: cover;
@@ -214,12 +225,13 @@ grid-column-end: 2;
     grid-column-end: 3;
 }
 
-.section1 .c4{
+.section1 .c4 {
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/databank_podracer_01_169_89a8621d.jpeg?region=0%2C0%2C1560%2C780);
     background-position: 50% 50%;
     background-size: cover;
 }
-.section1 .c3{
+
+.section1 .c3 {
     background-image: url(https://www.melty.fr/wp-content/uploads/meltyfr/2020/04/media-219.jpg);
     background-position: 50% 50%;
     background-size: cover;
@@ -241,43 +253,48 @@ grid-column-end: 2;
     grid-column-end: 3;
 }
 
-.section2 .art2{
+.section2 .art2 {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-auto-flow: column dense;
     gap: 1rem;
-    @media(min-width: 40rem){
+
+    @media(min-width: 40rem) {
         grid-template-columns: repeat(4fr);
         grid-template-rows: 1fr 1fr;
-        
-        .c5{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        
-        
-    }
-        .c6{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        
-        
-    }
-        .c7{
+
+        .c5 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+
+        }
+
+        .c6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+
+        }
+
+        .c7 {
             grid-column-start: 3;
             grid-column-end: 4;
-          
-            
-    }
-        .c8{
+
+
+        }
+
+        .c8 {
             grid-column-start: 4;
             grid-column-end: 5;
-        
+
+        }
     }
 }
-}
-.section3 .art3{
+
+.section3 .art3 {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -287,18 +304,18 @@ input[type="email" i] {
     border-color: var(--color-base);
 }
 
-.section3 .c2{
+.section3 .c2 {
     background-color: var(--color-base);
     padding: 0.5rem;
     color: white;
 }
 
-.section3 .c2:hover{
+.section3 .c2:hover {
     opacity: 90%;
     box-shadow: 0rem 0rem 1rem var(--color-base);
 }
 
-.cartouche2{
+.cartouche2 {
     box-shadow: 0rem 0rem 0.5rem black;
     height: 3rem;
     flex-grow: 1;
@@ -306,13 +323,12 @@ input[type="email" i] {
     border-radius: 8rem;
 }
 
-.cartouche2:hover{
+.cartouche2:hover {
     box-shadow: 0rem 0rem 1rem var(--color-base);
 }
 
-.section4 .art4{
+.section4 .art4 {
     display: flex;
     gap: 1rem;
     text-align: center;
 }
-
